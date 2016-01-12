@@ -1,4 +1,4 @@
-package main.com.canopy.bdaap;
+package com.cloudsoft.java.basics;
 
 public interface Horn {
 

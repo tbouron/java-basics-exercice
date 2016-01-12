@@ -1,4 +1,4 @@
-package main.com.canopy.bdaap;
+package com.cloudsoft.java.basics;
 
 /**
  * By running this program, here is what you should see in a console:
