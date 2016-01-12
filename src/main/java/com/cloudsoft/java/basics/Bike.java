@@ -14,14 +14,23 @@ public class Bike implements Vehicle {
 
     @Override
     public void brake(int speedDelta) {
-        this.speed -= speedDelta * this.gear;
+        this.speed -= speedDelta;
     }
 
+    /**
+     * Changes the internal bike gear.
+     *
+     * @param gear The gear number to change to.
+     */
     public void changeGear(int gear) {
+        final int oldGear = this.gear;
+
         // We change the gear
         this.gear = gear;
 
-        // We also update the speed based on the gear
-        this.speed = this.speed * this.gear;
+        // We also update the speed based on the gear (if changed)
+        if (oldGear != this.gear) {
+            this.speed = this.speed * this.gear;
+        }
     }
 }
